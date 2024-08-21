@@ -3,7 +3,7 @@
 
 [![MIT-badge]][MIT-url] [![black-badge]][black-url]
 
-> test push notification with ease
+> test Apple Push Notification with ease
 
 ## Quick Start
 
