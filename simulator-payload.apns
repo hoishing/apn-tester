@@ -1,0 +1,11 @@
+{
+    "Simulator Target Bundle": "your.app.bundle.id",
+    "aps": {
+        "alert": {
+            "title": "Push 💨",
+            "subtitle": "hi there 👋"
+        },
+        "sound": "default"
+    },
+    "custom": "some custom data"
+}
