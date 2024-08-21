@@ -1,3 +1,4 @@
 *.p8
 try*
 __pycache__
+.env
