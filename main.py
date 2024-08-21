@@ -14,7 +14,7 @@ st.markdown(
     > test Apple Push Notification with ease
 
     ![github](https://api.iconify.design/bi/github.svg?color=%236FD886&width=20) &nbsp;
-    [source code](https://github.com/hoishing)
+    [source code](https://github.com/hoishing/apn-tester)
     """
 )
 st.write("")
