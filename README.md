@@ -1,5 +1,5 @@
 
-# Apple Push Notification Tester
+# APN Tester
 
 [![st-badge]][apn-tester] [![MIT-badge]][MIT-url] [![black-badge]][black-url]
 
@@ -7,23 +7,38 @@
 
 ## Quick Start
 
-### Use it on Streamlit Community Cloud
+### Use it Online
 
-<https://apn-tester.streamlit.app>
+APN Tester on [Streamlit Community Cloud](https://apn-tester.streamlit.app)
 
-### Local Development
+### Install Locally
 
 `pip install "httpx[http2]" cryptography pyjwt streamlit watchdog`
 
-then run [streamlit]
+Then run it with [streamlit]
 
 `streamlit run main.py`
 
-### Using Simulator
+### Work with Simulator
 
-edit `simulator-payload.apns` then drag it to the simulator
+Edit the bundle ID and payloads in `simulator-payload.apns` then drag it to the simulator.
 
-or, edit `simulator.py` then run `python simulator.py`
+Or, edit `simulator.py` then run `python simulator.py`
+
+## Motivation
+
+### The Problem
+
+- I need to send push notifications to test APNs (Apple Push Notification Service) for my iOS projects.
+- Using push service providers like [Pusher](https://pusher.com) can be complicated. Typically, they require:
+    - Installing and learning how to use their client library on both the iOS app and the server side.
+    - Setting up a server to send push notifications.
+
+### What I Want
+
+- Avoid installing third-party libraries in my iOS project that would clutter the codebase.
+- Avoid setting up a server just to send a few push notifications.
+- Use a simple and user-friendly web UI to send push notifications easily - so here you go! 🚀
 
 ## Need Help?
 
