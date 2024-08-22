@@ -1,8 +1,12 @@
+"""using `xcrun simctl push` command to send push notification to simulator or device"""
+
 import subprocess, json
 from tempfile import NamedTemporaryFile
 
-bundle_id = "kng2.cc.try-push"
-device_id = "779AB5FF-B097-4D29-BC46-6BE8BC0DCCC8"  # simulator
+bundle_id = "your.bundle.id"
+
+# find in Xcode -> Window -> Device and Simulator
+device_id = "simulator-or-device-uuid"  
 
 payload = {
     "Simulator Target Bundle": bundle_id,

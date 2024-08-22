@@ -19,11 +19,12 @@ Then run it with [streamlit]
 
 `streamlit run main.py`
 
-### Work with Simulator
+### Prerequisite
 
-Edit the bundle ID and payloads in `simulator-payload.apns` then drag it to the simulator.
+Before using APN Tester, make sure your mobile client can process push notification correctly:
 
-Or, edit `simulator.py` then run `python simulator.py`
+- Edit the bundle ID and payloads in `local-payload.apns` then drag it to the simulator to see if it works or not
+- Or, edit `local-push.py` then run `python local-push.py` to send the push using `xcrun simctl push` command
 
 ## Motivation
 
