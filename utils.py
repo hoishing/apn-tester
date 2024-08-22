@@ -3,9 +3,12 @@
 import jwt
 import time
 from httpx import Response, Client
-from typing import Literal
+from enum import StrEnum
 
-EndPt = Literal["Sandbox", "Production"]
+
+class EndPt(StrEnum):
+    Sandbox = ".sandbox"
+    Production = ""
 
 
 def create_jwt_token(auth_key: str, team_id: str, key_id: str) -> str:
@@ -50,9 +53,7 @@ def send_push_notification(
         "authorization": f"bearer {jwt_token}",
     }
 
-    domain = "" if endpoint == "Production" else ".sandbox"
-
-    url = f"https://api{domain}.push.apple.com/3/device/{device_token}"
+    url = f"https://api{endpoint}.push.apple.com/3/device/{device_token}"
 
     # Use httpx.Client with HTTP/2 support
     with Client(http2=True) as client:

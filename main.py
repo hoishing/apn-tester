@@ -19,11 +19,10 @@ st.markdown(
 )
 st.write("")
 
-# with st.form("my_form"):
 st.write("#### APNs Configuration")
 
 c1, c2 = st.columns(2)
-bundle_id = c1.text_input("Bundle ID")
+bundle_id = c1.text_input("Bundle ID", placeholder="your.app.bundle.id")
 team_id = c2.text_input("Apple Team ID", placeholder="developer account team ID")
 
 c3, c4 = st.columns(2)
@@ -33,7 +32,7 @@ key_id = c4.text_input(
 )
 endpoint = c3.radio(
     "APNs Endpoint",
-    options=EndPt.__args__,
+    options=EndPt._member_names_,
     horizontal=True,
 )
 
@@ -56,10 +55,10 @@ auth_key = st.text_area(
 
 st.write("#### Payload Content")
 c5, c6 = st.columns(2)
-title = c5.text_input("Title", placeholder="title message")
-subtitle = c6.text_input("Subtitle", placeholder="subtitle message")
-body = st.text_input("Body", placeholder="body message")
-userInfo = st.text_input("userInfo", placeholder="any custom data")
+title = c5.text_input("Title", value="Hi there! 👋")
+subtitle = c6.text_input("Subtitle", value="Test push notification 💨")
+body = st.text_input("Body", value="This is a test message from APNs Tester 🚀")
+userInfo = st.text_input("userInfo", value="any additional data")
 
 # if st.form_submit_button("Send Push Notification"):
 if st.button("Send Push Notification"):
@@ -67,7 +66,7 @@ if st.button("Send Push Notification"):
     payload = create_payload(title, subtitle, body, userInfo)
     jwt_token = create_jwt_token(auth_key, team_id, key_id)
     response = send_push_notification(
-        bundle_id, device_token, endpoint, payload, jwt_token
+        bundle_id, device_token, EndPt[endpoint], payload, jwt_token
     )
 
     if response.status_code == 200:
