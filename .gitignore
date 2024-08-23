@@ -1,4 +1,6 @@
-*.p8
-try*
 __pycache__
 .env
+.venv
+*.p8
+todo.md
+try*
