@@ -7,7 +7,7 @@ from enum import StrEnum
 
 
 class EndPt(StrEnum):
-    Sandbox = ".sandbox"
+    Development = ".sandbox"
     Production = ""
 
 

@@ -33,9 +33,10 @@ key_id = c4.text_input(
     help="see Apple Developer website → Certificates, IDs & Profiles → Keys",
 )
 endpoint = c3.radio(
-    "APNs Endpoint",
+    "APNs Server",
     options=EndPt._member_names_,
     horizontal=True,
+    help="see the [docs](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns#Establish-a-connection-to-APNs) for details",
 )
 
 device_tokens = st.text_area(
