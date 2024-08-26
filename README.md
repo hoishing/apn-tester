@@ -41,6 +41,11 @@ Before using APN Tester, make sure your mobile client can process push notificat
 - Avoid setting up a server just to send a few push notifications.
 - Use a simple and user-friendly web UI to send push notifications easily - so here you go! 🚀
 
+## Privacy Statements
+
+- this app does not store any information from the users
+- all text fields and file uploaded are ephemeral and will be cleared after closing the webapp
+
 ## Need Help?
 
 [![git-logo] github issue][github issue]
