@@ -3,4 +3,4 @@ __pycache__
 .venv
 *.p8
 todo.md
-try*
+/try*
